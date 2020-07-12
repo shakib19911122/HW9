@@ -2,9 +2,7 @@
 
 ## Please check out the video below
 
-<video width="320" height="240" controls>
-  <source src="README.mov" type="video/mp4">
-</video>
+[![screenshot](http://img.youtube.com/watch?v=2c-yCpRv_wk/0.jpg)](https://www.youtube.com/watch?v=2c-yCpRv_wk "Readme")
 
 
 

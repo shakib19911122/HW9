@@ -7,10 +7,10 @@ const writeFileAsync = util.promisify(fs.writeFile);
 // stuff i need in the prompt user
 //title  (done)
 //description (done)
-// table of Contents (need to come back)
+// table of Contents (done)
 //installation (done)
 //usage (done)
-//license (need to come back)
+//license (done)
 //contributing (done)
 //tests?? (done)
 
@@ -51,7 +51,7 @@ function promptUser() {
                 type: "list",
                 message: "License",
                 name: "license",
-                choices:["1","2","3"] // need to check what need to be put in as choice 
+                choices:["ISC"]
             },
             {
                 type: "input",
@@ -65,7 +65,7 @@ function promptUser() {
             },
             {
                 type: "checkbox",
-                message: "Tabel of contents",
+                message: "Table of contents",
                 name: "tableContents",
                 choices: ["[Description](#description)","[Installation](#installation)","[Usage](#usage)","[Contributing](#contributing)","[Test](#test)","[Questions](#question)"]
             },
@@ -74,39 +74,38 @@ function promptUser() {
 }
 
 function generateReadMe(answer) {
-    return `
-    # ${answer.title}
+return `
+# ${answer.title}
 
-    ## Description
-    * ${answer.description}
+## Table of Contents
+* ${answer.tableContents}
 
-    ## Installation
-    * ${answer.installation}
+## Description
+* ${answer.description}
 
-    ## Usage
-    * ${answer.usage}
+## Installation
+* ${answer.installation}
 
-    ## Contributing
-    * ${answer.contributing}
+## Usage
+* ${answer.usage}
 
-    ## Test
-    * ${answer.test}
+## Contributing
+* ${answer.contributing}
 
-    ## Questions
-    * ${answer.github}
-    * ${answer.email}
- 
-    ## Table of Contents
-    * ${answer.tableContents}
- 
-    `
+## Test
+* ${answer.test}
+
+## Questions
+* ${answer.github}
+* ${answer.email}
+ `
 }
 
 promptUser()
     .then(function (answer) {
         const md = generateReadMe(answer);
 
-        return writeFileAsync("ReadMe.md", md);
+        return writeFileAsync("generator.md", md);
     }).then(function () {
         console.log("Success");
     }).catch(function (error) {

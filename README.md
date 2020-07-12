@@ -2,7 +2,7 @@
 
 ## Please check out the video below
 
-[![screenshot](http://img.youtube.com/watch?v=2c-yCpRv_wk/0.jpg)](https://www.youtube.com/watch?v=2c-yCpRv_wk "Readme")
+[![screenshot](http://img.youtube.com/vi/2c-yCpRv_wk/0.jpg)](https://www.youtube.com/watch?v=2c-yCpRv_wk "readme")
 
 
 
